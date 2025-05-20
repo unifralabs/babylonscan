@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-[14px];
+  }
+  html,
+  body {
+    @apply w-h-full;
+  }
+  body {
+    @apply bg-background text-foreground overflow-hidden text-base;
+  }
+
+  :root {
+    --gap: 1.15rem;
+    --gap-page: 1.15rem;
+
+    @media screen(md) {
+      --gap: 1.15rem;
+      --gap-page: 1.72rem;
+    }
+  }
+
+  *,
+  ::before,
+  ::after {
+    --tw-ring-color: transparent !important;
+    --tw-ring-offset-color: transparent !important;
+    border-color: transparent;
+    outline: none !important;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+  }
+
+  * ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .link {
+    @apply text-primary hover:text-primary/80 cursor-pointer transition-colors;
+  }
+}
+
+/* react-json-view */
+.variable-value {
+  word-break: break-all !important;
+}
+
+.object-key {
+  color: var(--foreground) !important;
+}
+
+.recharts-layer.recharts-cartesian-axis-tick tspan {
+  @apply fill-foreground-secondary;
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@cosmoscan/config-ts",
+  "version": "0.1.0",
+  "license": "ISC",
+  "private": true,
+  "files": [
+    "*.json"
+  ]
+}

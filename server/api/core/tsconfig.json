@@ -1,0 +1,9 @@
+{
+  "extends": "@cosmoscan/config-ts/base.json",
+  "include": [
+    "**/*.ts",
+    "../../../packages/core/server/api-plan/usage-alert.ts",
+    "../../../packages/core/server/api-plan/email.ts",
+    "../../../packages/core/server/api-plan/email-template.ts"
+  ]
+}

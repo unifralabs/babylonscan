@@ -1,0 +1,48 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": ["env/babylon/.*", "env/cosmos/.*"],
+  "ui": "tui",
+  "tasks": {
+    "dev": {
+      "dependsOn": ["db:studio"],
+      "inputs": ["$TURBO_DEFAULT$", ".env.*"],
+      "cache": false,
+      "persistent": true,
+      "env": ["COSMOSCAN_*", "PORT", "AUTH_URL"]
+    },
+    "build": {
+      "dependsOn": ["^build", "^db:generate"],
+      "inputs": ["$TURBO_DEFAULT$", ".env.*"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
+      "env": ["COSMOSCAN_*", "AUTH_URL"]
+    },
+    "start": {
+      "cache": false,
+      "persistent": true,
+      "env": ["COSMOSCAN_*", "PORT", "AUTH_URL"]
+    },
+    "db:studio": {
+      "cache": true,
+      "env": ["COSMOSCAN_*"]
+    },
+    "db:migrate:deploy": {
+      "env": ["COSMOSCAN_*"]
+    },
+    "db:pull": {
+      "env": ["COSMOSCAN_*"]
+    },
+    "db:push": {
+      "env": ["COSMOSCAN_*"]
+    },
+    "db:seed": {
+      "env": ["COSMOSCAN_*"]
+    },
+    "db:generate": {
+      "cache": false,
+      "dependsOn": ["^db:generate"],
+      "env": ["COSMOSCAN_*"]
+    },
+    "clean": {},
+    "lint": {}
+  }
+}

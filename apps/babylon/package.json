@@ -1,0 +1,27 @@
+{
+  "name": "@cosmoscan/babylon",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0",
+    "lint": "eslint . --max-warnings 0",
+    "clean": "rm -rf .turbo .next node_modules"
+  },
+  "dependencies": {
+    "@keystonehq/keystone-sdk": "^0.4.1",
+    "@keystonehq/sdk": "^0.21.3",
+    "@scure/bip32": "^1.4.0",
+    "keyv": "^5.0.3"
+  },
+  "devDependencies": {
+    "@cosmoscan/config-nextjs": "workspace:*",
+    "@cosmoscan/config-tailwindcss": "workspace:*",
+    "@cosmoscan/config-ts": "workspace:*",
+    "@cosmoscan/core": "workspace:*",
+    "@cosmoscan/core-api": "workspace:*",
+    "@cosmoscan/shared": "workspace:*",
+    "@cosmoscan/ui": "workspace:*"
+  }
+}

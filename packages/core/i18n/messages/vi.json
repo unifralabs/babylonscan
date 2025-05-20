@@ -1,0 +1,1162 @@
+{
+  "Header": {
+    "signIn": "Đăng nhập",
+    "signOut": "Đăng xuất",
+    "myAccount": "Tài khoản của tôi",
+    "watchList": "Danh sách theo dõi",
+    "nameTags": "Nhãn tên",
+    "apiKey": "Khóa API",
+    "billing": "Thanh toán",
+    "searchNotFoundTip": "Không tìm thấy kết quả",
+    "searchPlaceholder": "Tìm kiếm theo Địa chỉ / Mã giao dịch / Khối / Nhãn hợp đồng"
+  },
+  "Menu": {
+    "home": "Trang chủ",
+    "babylonChain": "Chuỗi Babylon",
+    "transactions": "Giao dịch",
+    "blocks": "Khối",
+    "topAccounts": "Tài khoản hàng đầu",
+    "contracts": "Hợp đồng",
+    "validators": "Người xác thực",
+    "proposals": "Đề xuất",
+    "bbnStaking": "BABY Staking",
+    "btcStaking": "cam kết BTC",
+    "stakingTransactions": "Giao dịch đặt cược",
+    "finalityProviders": "Nhà cung cấp tính cuối cùng",
+    "btcFinalityProviders": "Nhà cung cấp tính cuối BTC",
+    "consumerChains": "Chuỗi tiêu dùng",
+    "wallet": "Ví",
+    "portfolio": "Danh mục đầu tư",
+    "send": "Gửi",
+    "createProposal": "Tạo đề xuất",
+    "btcEpochs": "Kỷ nguyên BTC",
+    "tokens": "Mã thông báo",
+    "devTools": "Công cụ phát triển",
+    "publicTag": "Đệ trình nhãn công cộng",
+    "faucet": "Vòi",
+    "apiDoc": "Tài liệu API L2scan",
+    "info": "Thông tin",
+    "advertisingInquiries": "Yêu cầu quảng cáo",
+    "doc": "Tài liệu",
+    "feedback": "Phản hồi",
+    "pricing": "Giá gói API",
+    "staking": "cam kết",
+    "leaderboard": "Bảng xếp hạng",
+    "charts": "Biểu đồ",
+    "parameters": "Tham số"
+  },
+  "Footer": {
+    "contactUs": "liên hệ chúng tôi",
+    "subscribe": "Gửi vấn đề",
+    "featureRequest": "Yêu cầu tính năng",
+    "donate": "Quyên góp",
+    "investment": "Đầu tư",
+    "getToKnow": "tìm hiểu về chúng tôi",
+    "twitter": "Twitter",
+    "discord": "Discord",
+    "desc": "L2scan là một công cụ khám phá do cộng đồng điều khiển bởi AI, dành riêng để cung cấp trải nghiệm người dùng tốt hơn trên các nền tảng tổng hợp. @ {date} L2scan"
+  },
+  "Common": {
+    "active": "Hoạt động",
+    "standby": "Chờ",
+    "noData": "Không có dữ liệu",
+    "success": "Thành công",
+    "failed": "Thất bại",
+    "pending": "Đang chờ xử lý",
+    "unbonded": "Chưa kết nối",
+    "unbonding": "Đang kết nối",
+    "withdrawn": "Đã rút",
+    "slashed": "Đã giảm",
+    "addressQrcode": "Mã QR địa chỉ",
+    "first": "trang đầu",
+    "pageNum": "Trang {pageNum}",
+    "back": "Trở lại",
+    "clear": "Xóa",
+    "apply": "Áp dụng",
+    "resend": "Gửi lại",
+    "submit": "Gửi đi",
+    "cancel": "Hủy",
+    "confirm": "Xác nhận",
+    "reset": "Đặt lại",
+    "add": "Thêm",
+    "continue": "Tiếp tục",
+    "operationSuccessful": "Hoạt động thành công",
+    "operationFailed": "Hoạt động thất bại",
+    "overview": "Tổng quan",
+    "status": "Trạng thái",
+    "age": "thời gian",
+    "txn": "Giao dịch",
+    "finalized": "Đã hoàn tất",
+    "created": "Đã tạo",
+    "accumulating": "Tích lũy",
+    "sealed": "Đã niêm phong",
+    "submitted": "Đã nộp",
+    "confirmed": "Đã xác nhận",
+    "all": "Tất cả",
+    "24h": "24h",
+    "7d": "7d",
+    "30d": "30d",
+    "90d": "90 ngày",
+    "1y": "1 năm",
+    "yes": "Có",
+    "no": "Không",
+    "chain": "chuỗi",
+    "connectWallet": "Kết nối Ví",
+    "disconnect": "Ngắt kết nối",
+    "cosmosWallet": "Ví Cosmos",
+    "btcWallet": "Ví BTC",
+    "jailed": "Bị giam giữ",
+    "inactive": "Không hoạt động",
+    "default": "Mặc định",
+    "monthly": "Hàng tháng",
+    "quarterly": "Hàng thứ",
+    "annually": "Hàng năm",
+    "off": "Giảm giá"
+  },
+  "Home": {
+    "babylonBannerDesc": "Chuỗi Babylon giới thiệu một cách sáng tạo để tận dụng sự bảo mật của Bitcoin trong nền kinh tế phi tập trung. Bằng cách sử dụng Giao thức cam kết Bitcoin, nó nhằm mục đích tạo ra một thế giới phi tập trung được bảo mật bằng Bitcoin, nâng cao bảo mật và thúc đẩy việc áp dụng trên các chuỗi PoS.",
+    "cosmosHubBannerDesc": "Cosmos Hub là một hệ sinh thái các chuỗi khối kết nối với nhau, được thiết kế để tạo điều kiện phát triển các ứng dụng phi tập trung (dApps) và dịch vụ. Nó được hỗ trợ bởi thuật toán đồng thuận Tendermint, là một công cụ đồng thuận chịu lỗi Byzantine (BFT) được thiết kế để cung cấp tính hoàn tất nhanh chóng và bảo mật cao.",
+    "babylonScan": "BabylonScan",
+    "chainTitle": "Trình khám phá cho Chuỗi {chainName}",
+    "btcStaking": "cam kết Bitcoin",
+    "totalStake": "Tổng đặt cược (Đã xác nhận)",
+    "stakers": "Người đặt cược",
+    "finalityProviders": "Nhà cung cấp tính cuối cùng",
+    "delegations": "Phân bổ",
+    "averageAPY": "Lợi nhuận trung bình hàng năm",
+    "averageAPY": "Lợi nhuận trung bình hàng năm",
+    "supportedChains": "Chuỗi hỗ trợ",
+    "chainSummary": "Tóm tắt chuỗi",
+    "averageBlockTime": "Thời gian khối trung bình",
+    "transactions": "Giao dịch",
+    "activeValidators": "Người xác thực hoạt động",
+    "latestBlock": "Khối mới nhất",
+    "walletAddresses": "Địa chỉ ví",
+    "trendingChains": "Chuỗi xu hướng",
+    "stakeNow": "cam kết ngay",
+    "trendingAssets": "Tài sản xu hướng",
+    "stakingTransactions": "Giao dịch đặt cược",
+    "viewAll": "Xem tất cả",
+    "latestBlocks": "Các khối mới nhất",
+    "marketCap": "Vốn hóa thị trường",
+    "staker": "Người đặt cược",
+    "proposer": "Người đề xuất",
+    "txns": "giao dịch",
+    "signed": "đã ký",
+    "block": "Khối",
+    "secs": "giây",
+    "babylonDevTip": "Xin lưu ý rằng dữ liệu được trình bày là từ chuỗi devnet Babylon và có thể không chính xác.",
+    "stakedBTC": "BTC đã đặt cược",
+    "stakedBTCLabel": "BTC đã đặt cược:",
+    "stakersLabel": "Người đặt cược:",
+    "btcUnit": "BTC"
+  },
+  "Account": {
+    "apiKey": "Khóa API",
+    "apiKeyDesc": "Một khóa Api duy nhất cho tài khoản của bạn để truy cập các API đa chuỗi của chúng tôi",
+    "activePlan": "Gói hiện tại",
+    "upgrade": "Nâng cấp",
+    "renewOn": "Ngày gia hạn",
+    "expiresOn": "Ngày hết hạn",
+    "callsPerSecond": "Cuộc gọi API mỗi giây",
+    "callsLimit": "{callsLimit} cuộc gọi",
+    "unitsPerDay": "Đơn vị tính toán mỗi ngày",
+    "upToCus": "Lên đến {cus} CUs",
+    "computeUnitsUsed": "Đơn vị tính toán đã sử dụng",
+    "cus": "{cus} CUs",
+    "computeUnitsAvailable": "Đơn vị tính toán có sẵn",
+    "enableEmailNotification": "Kích hoạt Thông báo qua Email",
+    "todayUsage": "Sử dụng hôm nay",
+    "privateNameTags": "Thẻ tên riêng tư",
+    "address": "Địa chỉ",
+    "privateNameTag": "Thẻ tên riêng tư",
+    "editPrivateNameTag": "Chỉnh sửa thẻ tên riêng tư",
+    "addPrivateNameTag": "Thêm thẻ tên riêng tư mới",
+    "addressPlaceholder": "Nhập địa chỉ của bạn...",
+    "privateNameTagPlaceholder": "ví dụ: Địa chỉ quyên góp...",
+    "privateNameTagsLimit": "Thẻ tên riêng tư (tối đa {limit} ký tự) có thể được sử dụng để dễ dàng nhận dạng các địa chỉ",
+    "privateNote": "Ghi chú riêng tư (Tùy chọn)",
+    "privateNotePlaceholder": "Ghi chú ngắn...",
+    "privateNoteLimit": "Một ghi chú riêng tư (tối đa {limit} ký tự) có thể được đính kèm với địa chỉ này. Vui lòng KHÔNG lưu trữ bất kỳ mật khẩu hoặc khóa riêng tư nào ở đây.",
+    "editWatchAddress": "Chỉnh sửa Địa chỉ",
+    "addWatchAddress": "Thêm Địa chỉ Mới",
+    "emailNotify": "Email để nhận thông báo",
+    "emailNotifyPlaceholder": "Nhập Địa chỉ Email của bạn...",
+    "description": "Mô tả (Tùy chọn)",
+    "descriptionPlaceholder": "Mô tả ngắn...",
+    "notificationMethods": "Phương pháp thông báo",
+    "notificationMethodsDescription": "Bạn có thể theo dõi và nhận cảnh báo qua email khi một địa chỉ trong danh sách theo dõi của bạn gửi hoặc nhận bất kỳ giao dịch nào.",
+    "notificationMethodDictNoNotification": "Không Thông báo",
+    "notificationMethodDictIncomingAndOutgoing": "Thông báo về Giao dịch Đến & Đi",
+    "notificationMethodDictIncoming": "Chỉ thông báo về Giao dịch Đến (Nhận)",
+    "notificationMethodDictOutgoing": "Chỉ thông báo về Giao dịch Đi (Gửi)",
+    "action": "Hành động",
+    "privateNameTagDesc": "Một thẻ tên riêng tư (tối đa {nameTagLimit} ký tự) và ghi chú (privateNoteLimit} ký tự) cho các địa chỉ cá nhân có thể được lưu và hữu ích để gắn nhãn các địa chỉ quan tâm.",
+    "addressLimitDesc": "địa chỉ được gắn thẻ (trong tổng số {addressLimit} giới hạn tối đa)",
+    "confirmationRequired": "Yêu cầu Xác nhận",
+    "deleteTip": "Bạn có chắc chắn muốn xóa nhãn địa chỉ không?",
+    "watchList": "Danh sách theo dõi",
+    "email": "Email",
+    "notificationMethod": "Phương pháp Thông báo",
+    "watchListDesc": "Có thể gửi thông báo qua Email cho bạn khi một địa chỉ trong danh sách theo dõi của bạn gửi hoặc nhận bất kỳ giao dịch nào.",
+    "watchListAddressLimitDesc": "địa chỉ được chọn (trong tổng số {addressLimit} giới hạn tối đa)",
+    "emailSendLimit": "Email đã gửi hôm nay (trong tổng số {emailSendLimit} giới hạn tối đa)",
+    "deleteWatchListTip": "Bạn có chắc chắn muốn gỡ liên kết địa chỉ không?",
+    "getAnEmail": "Không nhận được email?",
+    "resendCountdown": "Gửi lại sau {countdown}s",
+    "updateEmail": "Cập nhật Email",
+    "connectEmail": "Kết nối Email của bạn",
+    "switchEmailTip": "Email này đã được kết nối với tài khoản khác. Vui lòng chuyển sang email khác để tiếp tục.",
+    "emailAddress": "Địa chỉ Email",
+    "billing": "Thanh toán",
+    "cuPerCall": "{cuPerCall} Đơn vị tính / Cuộc gọi",
+    "pricing": "Giá gói API",
+    "pricingTip": "Một khóa API BabylonScan để truy vấn tất cả dữ liệu bạn cần. Xem danh sách API <apiLink>tại đây</apiLink>.",
+    "readyToGetStarted": "Sẵn sàng để bắt đầu chưa?",
+    "selectPlanTip": "Chọn kế hoạch phù hợp nhất với bạn hoặc liên hệ với chúng tôi để tùy chọn tùy chỉnh.",
+    "planLevelFree": "Miễn phí",
+    "planLevelStandard": "Chuẩn",
+    "planLevelAdvanced": "Nâng cao",
+    "planLevelProfessional": "Phụ trách nhiệm",
+    "planLevelEnterprise": "Doanh nghiệp",
+    "orderCreated": "Đã tạo",
+    "orderPendingPayment": "Đang chờ xác nhận",
+    "orderCompleted": "Đã hoàn tất",
+    "orderFailed": "Thất bại",
+    "orderCancelled": "Đã hủy",
+    "invoiceNotFound": "Không tìm thấy hóa đơn",
+    "time": "Thời gian",
+    "level": "Cấp độ",
+    "period": "Thời gian",
+    "method": "Phương pháp",
+    "amount": "Số tiền",
+    "status": "Trạng thái",
+    "failedToFetchPaymentUrl": "Không thể lấy URL thanh toán",
+    "payNow": "Thanh toán ngay",
+    "downloadInvoice": "Tải xuống Hóa đơn",
+    "unsubscribedSuccessfully": "Hủy đăng ký thành công, vui lòng chờ xác nhận...",
+    "upgradeSuccessfully": "Nâng cấp thành công, vui lòng chờ xác nhận...",
+    "stripeTip": "Hỗ trợ thẻ tín dụng, thẻ ghi nợ và hơn thế nữa.",
+    "coinbaseTip": "Chỉ có sẵn bằng tiền điện tử. Có sẵn hàng quý hoặc hàng năm",
+    "customization": "Tùy chỉnh",
+    "cusPerDay": "Đơn vị tính mỗi ngày",
+    "unsubscribe": "Hủy đăng ký",
+    "currentPlan": "Kế hoạch hiện tại",
+    "contactUs": "Liên hệ với chúng tôi",
+    "upgradeNow": "Nâng cấp ngay",
+    "paymentMethod": "Phương thức thanh toán",
+    "mo": "tháng",
+    "callSecondLimit": "giới hạn cuộc gọi/giây",
+    "unsubscribeDate": "Nếu bạn hủy đăng ký ngay bây giờ, bạn vẫn có thể truy cập kế hoạch này cho đến ngày {date}."
+  },
+  "Address": {
+    "addressDetails": "Chi tiết Địa chỉ",
+    "symbolBalance": "Số dư {symbol}",
+    "reward": "Phần thưởng",
+    "unclaimedReward": "Phần thưởng chưa nhận",
+    "availableBtc": "BTC có sẵn",
+    "delegatedBtc": "BTC đã được phân bổ",
+    "unbondingBtc": "BTC đang hủy kết nối",
+    "nameTags": "Nhãn tên",
+    "btcStaker": "Người đặt cược BTC",
+    "btcAddress": "Địa chỉ BTC",
+    "staking": "cam kết",
+    "transactions": "Giao dịch",
+    "portfolio": "Danh mục đầu tư",
+    "invalidAddress": "Địa chỉ không hợp lệ"
+  },
+  "Contract": {
+    "contractDetails": "Chi tiết Hợp đồng",
+    "all": "Tất cả",
+    "verified": "Đã xác minh",
+    "label": "Nhãn",
+    "codeId": "ID mã",
+    "contractCounts": "Số lượng Hợp đồng",
+    "checksum": "Checksum",
+    "creatorAccount": "Tài khoản người tạo",
+    "permission": "Quyền",
+    "verifyContract": "Xác minh Hợp đồng",
+    "contracts": "Hợp đồng",
+    "sourceCode": "Mã nguồn",
+    "noSourceCode": "Không có mã nguồn",
+    "unspecified": "Chưa được chỉ định",
+    "nobody": "Không ai",
+    "everybody": "Mọi người",
+    "limitedAddresses": "Địa chỉ giới hạn",
+    "verifyContractDescription": "Xác minh mã nguồn cung cấp minh bạch cho người dùng tương tác với các hợp đồng thông minh. Bằng cách tải lên mã nguồn, chúng tôi sẽ liên kết mã được biên dịch với mã trên chuỗi khối. Cũng như các hợp đồng, một \"hợp đồng thông minh\" nên cung cấp cho người dùng nhiều thông tin hơn về những gì họ đang \"ký kết kỹ thuật số\" và cho người dùng cơ hội kiểm tra mã để độc lập xác minh rằng nó thực sự thực hiện những gì nó được thiết kế để làm.",
+    "contractVerificationApi": "API xác minh Hợp đồng",
+    "optimizerType": "Loại Tối ưu hóa",
+    "optimizerVersion": "Phiên bản Tối ưu hóa",
+    "repositoryUrl": "URL Kho lưu trữ",
+    "repositoryUrlTip": "URL kho lưu trữ phải là một URL hợp lệ đến kho lưu trữ GitHub.",
+    "branchName": "Tên Nhánh",
+    "verifyAndPublish": "Xác minh và Xuất bản",
+    "submittedSuccessfully": "Yêu cầu của bạn đã được gửi thành công. Vui lòng kiểm tra <resultLink>kết quả</resultLink> sau.",
+    "verificationTaskGuid": "GUID công việc xác minh",
+    "checkVerificationStatus": "Kiểm tra trạng thái xác minh bằng GUID thông qua API",
+    "pending": "Đang chờ xử lý",
+    "reset": "Đặt lại",
+    "result": "kết quả",
+    "initialBlock": "Khối ban đầu",
+    "adminAccount": "Tài khoản quản trị",
+    "nameTags": "Nhãn tên",
+    "executionCount": "Số lần thực thi",
+    "history": "Lịch sử",
+    "transactions": "Giao dịch",
+    "address": "Địa chỉ",
+    "creator": "Người tạo",
+    "creationAge": "thời gian sáng tạo",
+    "collapse": "Thu gọn",
+    "expand": "Mở rộng",
+    "height": "Chiều cao",
+    "time": "Thời gian",
+    "message": "Thông điệp"
+  },
+  "Block": {
+    "block": "Khối",
+    "blocks": "Các khối",
+    "transactions": "Giao dịch",
+    "blockReward": "Phần thưởng Khối",
+    "size": "Kích thước (Bytes)",
+    "gas": "Gas (Đã sử dụng / Mong muốn)",
+    "blockRewardTip": "Các mã thông báo được đúc như là phần thưởng cho khối này",
+    "finalityProvider": "Nhà cung cấp tính cuối cùng",
+    "btcStaker": "Người đặt cược BTC",
+    "validator": "Người xác thực",
+    "hash": "Băm",
+    "hashTip": "Băm tiêu đề của khối hiện tại",
+    "round": "Vòng",
+    "roundTip": "Số lần lặp lại trong quy trình đồng thuận, nơi các nút cố gắng đạt được sự đồng thuận về đề xuất khối tiếp theo",
+    "transactionsTip": "Số lượng giao dịch được đưa vào khối này",
+    "gasTip": "Tổng số gas tiêu thụ bởi tất cả các giao dịch trong khối này / tổng gas tối đa mà tất cả các giao dịch trong khối sẵn sàng chi trả",
+    "finalityProviderTip": "Trạng thái hoàn tất của khối: Đang chờ xử lý hoặc Đã hoàn tất",
+    "validatorsTip": "Người xác thực đã ký / Tổng số người xác thực",
+    "proposer": "Người đề xuất",
+    "proposedBlocks": "Các khối đề xuất",
+    "time": "Thời gian",
+    "scanningNewBlocks": "Đang quét các khối mới...",
+    "newBlocksFound": "{count, plural, one {Đã tìm thấy # khối mới} other {Đã tìm thấy # khối mới}}"
+  },
+  "Transaction": {
+    "value": "Giá trị",
+    "transactionFee": "Phí giao dịch",
+    "gas": "Gas (Đã dùng / Yêu cầu)",
+    "messages": "Tin nhắn",
+    "eventLogs": "Nhật ký sự kiện",
+    "noEventLogs": "Không có nhật ký sự kiện",
+    "status": "Trạng thái",
+    "txnHash": "Mã giao dịch",
+    "type": "Loại",
+    "block": "Khối",
+    "txnFee": "Phí giao dịch",
+    "stakingTransactions": "Giao dịch đặt cược",
+    "staker": "Người đặt cược",
+    "amount": "Số lượng",
+    "finalityProviders": "Nhà cung cấp tính chung cuộc",
+    "period": "Thời hạn",
+    "transactions": "Giao dịch",
+    "transactionDetails": "Chi tiết giao dịch",
+    "transactionHash": "Mã giao dịch",
+    "statusTip": "Trạng thái của giao dịch",
+    "memo": "Ghi chú",
+    "memoTip": "Thông tin bổ sung hoặc ghi chú của giao dịch",
+    "finalityProvider": "Nhà cung cấp tính chung cuộc",
+    "chain": "Chuỗi",
+    "reward": "Phần thưởng",
+    "delegations": "Ủy thác",
+    "unbonding": "Đang hủy ủy thác",
+    "withdrawns": "Đã rút",
+    "btcStakingFilterTip": "Chỉ giao dịch liên quan đến đặt cược Bitcoin",
+    "pending": "Đang chờ xử lý",
+    "active": "Đang hoạt động",
+    "unbonded": "Đã hủy ủy thác",
+    "withdrawn": "Đã rút",
+    "slashed": "Đã bị phạt"
+  },
+  "FinalityProvider": {
+    "finalityProvider": "Nhà cung cấp tính cuối cùng",
+    "btcPk": "BTC PK",
+    "totalDelegation": "Tổng phân bổ",
+    "totalDelegationTip": "Tổng số phân bổ trên tất cả các chuỗi được hỗ trợ",
+    "stakers": "Người đặt cược",
+    "stakersTip": "Số lượng người đặt cược cho nhà cung cấp này trên tất cả các chuỗi được hỗ trợ",
+    "commission": "Hoa hồng",
+    "commissionTip": "Tỷ lệ hoa hồng cho nhà cung cấp này",
+    "change": "Thay đổi",
+    "searchFp": "Tìm kiếm nhà cung cấp tính cuối cùng",
+    "btcFpTitle": "Nhà cung cấp tính cuối cùng BTC (Mạng chính BTC)",
+    "totalConfirmedStake": "Tổng đặt cược (Đã xác nhận)",
+    "finalityProviders": "Nhà cung cấp tính cuối cùng",
+    "Address": "Địa chỉ",
+    "website": "Website",
+    "description": "Mô tả",
+    "votingPower": "Quyền bỏ phiếu",
+    "votingPowerTip": "Quyền bỏ phiếu của người xác thực trong mạng",
+    "selfBonded": "Tự kết nối",
+    "uptime": "Thời gian hoạt động",
+    "uptimeTip": "Tham gia trong 10.000 khối cuối cùng",
+    "status": "Trạng thái",
+    "delegations": "Phân bổ",
+    "transactions": "Giao dịch",
+    "amount": "Số tiền",
+    "txHash": "Băm giao dịch",
+    "block": "Khối",
+    "staker": "Người đặt cược",
+    "totalStakingValue": "Tổng giá trị đặt cược",
+    "address": "Địa chỉ",
+    "searchStaker": "Tìm kiếm người đặt cược",
+    "searchByNameOrAddress": "Tìm kiếm theo tên hoặc địa chỉ của nhà cung cấp tính cuối cùng"
+  },
+  "Validator": {
+    "validators": "Người xác thực",
+    "validator": "Người xác thực",
+    "totalStake": "Tổng đặt cược",
+    "lastEpochRewards": "Phần thưởng Kỷ nguyên cuối cùng",
+    "averageAPY": "Lợi nhuận trung bình hàng năm",
+    "totalValidators": "Tổng số người xác thực",
+    "epoch": "Kỷ nguyên",
+    "name": "Tên",
+    "operatorAddress": "Địa chỉ điều hành",
+    "ownerAddress": "Địa chỉ chủ sở hữu",
+    "website": "Website",
+    "description": "Mô tả",
+    "votingPower": "Quyền bỏ phiếu",
+    "selfBonded": "Tự kết nối",
+    "uptime": "Thời gian hoạt động 10K",
+    "uptimeTip": "Tham gia trong 10.000 khối cuối",
+    "commission": "Hoa hồng",
+    "commissionTip": "Tổng phân bổ trên tất cả các chuỗi được hỗ trợ",
+    "maxRate": "Tỷ lệ tối đa",
+    "maxChangeRate": "Tỷ lệ thay đổi tối đa",
+    "timestampInclusion": "Bao gồm dấu thời gian 50",
+    "timestampInclusionTip": "50 dấu thời gian kỳ truy cập cuối mà chữ ký chứng nhận của người xác thực được bao gồm trong",
+    "lastSignedEpoch": "Kỷ nguyên chữ ký mới nhất",
+    "status": "Trạng thái",
+    "validatorDetails": "Chi tiết Người xác thực",
+    "stakers": "Người đặt cược",
+    "votes": "Bỏ phiếu",
+    "powerEvents": "Sự kiện Quyền lực",
+    "blocksMissed": "{num} khối đã bỏ lỡ",
+    "txHash": "Băm giao dịch",
+    "type": "Loại",
+    "height": "Chiều cao",
+    "amount": "Số tiền",
+    "time": "Thời gian",
+    "id": "ID",
+    "title": "Tiêu đề",
+    "vote": "Bỏ phiếu",
+    "delegator": "Người phân bổ",
+    "block": "Khối",
+    "stake": "Đặt cược",
+    "noValidatorsFound": "Không tìm thấy người xác thực nào phù hợp với tiêu chí tìm kiếm của bạn",
+    "searchError": "Đã xảy ra lỗi khi tìm kiếm người xác thực. Vui lòng thử lại.",
+    "stakedBBN": "BBN đã đặt cược"
+  },
+  "Proposal": {
+    "proposals": "Đề xuất",
+    "id": "ID",
+    "title": "Tiêu đề",
+    "type": "Loại",
+    "status": "Trạng thái",
+    "votingTime": "Thời gian Bỏ phiếu",
+    "proposalResult": "Kết quả Đề xuất",
+    "turnoutQuorum": "Tham đồng / Đa số",
+    "vote": "Bỏ phiếu",
+    "description": "Mô tả",
+    "noWithVeto": "Không với Quyền phủ quyết",
+    "noWithVetoTip": "báo hiệu một đề xuất vi phạm lợi ích của thiểu số, là thư rác hoặc vi phạm các thủ tục quản trị. Đề xuất sẽ thất bại nếu hơn ⅓ bỏ phiếu \"Không với Quyền phủ quyết\"",
+    "votes": "Phiếu bầu",
+    "validator": "Người xác thực",
+    "voter": "Người bỏ phiếu",
+    "time": "Thời gian",
+    "txHash": "Băm giao dịch",
+    "weight": "Trọng số",
+    "allAccounts": "Tất cả tài khoản",
+    "validatorsOnly": "Chỉ người xác thực",
+    "regularAccounts": "Tài khoản thông thường",
+    "didNotVote": "Không bỏ phiếu",
+    "accountType": "Loại tài khoản",
+    "regularAccount": "Tài khoản thông thường",
+    "name": "Tên",
+    "address": "Địa chỉ",
+    "viewBy": "Xem theo",
+    "allVotes": "Tất cả phiếu bầu",
+    "yes": "Có",
+    "no": "Không",
+    "veto": "Phủ quyết",
+    "abstain": "Bỏ phiếu trắng",
+    "searchPlaceholder": "Tìm kiếm theo tên hoặc địa chỉ",
+    "proposalMessages": "Tin nhắn Đề xuất",
+    "upgradeHeight": "Chiều cao Nâng cấp",
+    "info": "Thông tin",
+    "recipient": "Người nhận",
+    "amount": "Số lượng",
+    "subspace": "Không gian con",
+    "key": "Khóa",
+    "value": "Giá trị",
+    "authority": "Quyền hạn",
+    "rawData": "Dữ liệu thô",
+    "community_tax": "Thuế cộng đồng",
+    "base_proposer_reward": "Phần thưởng cơ bản cho người đề xuất",
+    "bonus_proposer_reward": "Phần thưởng bổ sung cho người đề xuất",
+    "withdraw_addr_enabled": "Đã bật địa chỉ rút tiền",
+    "haltingHeight": "Chiều cao dừng",
+    "finalityProviderPublicKeys": "Khóa công khai của Nhà cung cấp tính cuối cùng",
+    "proposer": "Người đề xuất",
+    "deposits": "Tiền gửi",
+    "noDeposits": "Không tìm thấy tiền gửi",
+    "depositor": "Người gửi tiền",
+    "links": "Liên Kết",
+    "ipfs": "IPFS",
+    "forum": "Diễn Đàn",
+    "additionalLink": "Liên Kết Bổ Sung",
+    "expedited": "Khẩn cấp"
+  },
+  "Token": {
+    "denom": "Định danh",
+    "maxTotalSupply": "Nguồn cung tối đa",
+    "holders": "Người sở hữu",
+    "type": "Loại",
+    "decimals": "Số thập phân",
+    "topHolders": "Người sở hữu hàng đầu",
+    "rank": "Xếp hạng",
+    "address": "Địa chỉ",
+    "balance": "Số dư",
+    "percentage": "Phần trăm",
+    "tokenTracker": "Theo dõi mã thông báo",
+    "token": "Mã thông báo",
+    "price": "Giá",
+    "change": "Thay đổi (%)",
+    "volume24H": "Khối lượng (24H)",
+    "circulatingMarketCap": "Vốn hóa Thị trường Lưu thông",
+    "trending": "Đang hoạt động",
+    "liquidStakingAssets": "Tài sản đồng thuận",
+    "ibcTokens": "Mã thông báo IBC",
+    "bridgedTokens": "Mã thông báo được đưa chuyền"
+  },
+  "TopAccounts": {
+    "topAccounts": "Tài khoản hàng đầu"
+  },
+  "ConsumerChains": {
+    "consumerChains": "Chuỗi tiêu dùng",
+    "chainId": "ID Chuỗi",
+    "chainName": "Tên Chuỗi",
+    "description": "Mô tả"
+  },
+  "Epochs": {
+    "epochs": "Chu kỳ",
+    "ended": "Đã kết thúc",
+    "sealed": "Đã niêm phong",
+    "submittedToBTC": "Đã gửi tới BTC",
+    "btcConfirmed": "Đã xác nhận BTC",
+    "btcFinalized": "BTC đã hoàn tất",
+    "epochNumber": "Số chu kỳ",
+    "btcTimestampStatus": "Trạng thái dấu thời gian BTC",
+    "epochCompletionTime": "Thời gian hoàn thành chu kỳ",
+    "btcComfirmations": "Xác nhận BTC",
+    "waitingToBeTimestamped": "Đang chờ được đánh dấu thời gian",
+    "confirmations": "xác nhận"
+  },
+  "Faucet": {
+    "babylonFaucet": "Vòi Babylon",
+    "amount": "Số tiền",
+    "babylonAddress": "Địa chỉ Babylon",
+    "getFaucet": "Nhận Vòi",
+    "faucetSuccess": "Yêu cầu vòi của bạn đã được gửi thành công. Vui lòng kiểm tra kết quả sau tại đây",
+    "faucetFailed": "Yêu cầu vòi thất bại",
+    "signIn": "Đăng nhập"
+  },
+  "Staking": {
+    "staking": "cam kết",
+    "protocol": "Giao thức",
+    "youWill": "Bạn sẽ {text}",
+    "fromValidator": "Từ người xác thực",
+    "toValidator": "Đến người xác thực",
+    "networkFee": "Phí mạng",
+    "stake": "đặt cược",
+    "restake": "đặt cược lại",
+    "unstake": "hủy đặt cược",
+    "confirmText": "Xác nhận {text}",
+    "restaking": "Đang đặt cược lại",
+    "unstaking": "Hủy đặt cược",
+    "myStaking": "Cược của tôi",
+    "withdraw": "Rút",
+    "myDelegation": "Phân bổ của tôi",
+    "unbonded": "Chưa kết nối",
+    "unbonding": "Đang hủy kết nối",
+    "votingPower": "Quyền bỏ phiếu",
+    "commission": "Hoa hồng",
+    "finalityProvider": "Nhà cung cấp tính cuối cùng",
+    "totalDelegation": "Tổng phân bổ",
+    "validators": "Người xác thực",
+    "insufficientBalance": "Số dư không đủ",
+    "maxPrecision": "Độ chính xác tối đa là {precision}",
+    "validator": "Người xác thực",
+    "amount": "Số tiền",
+    "max": "Tối đa",
+    "available": "Có sẵn",
+    "delegation": "Phân bổ",
+    "currentValidator": "Người xác thực hiện tại",
+    "redelegateTo": "Phân bổ lại cho",
+    "insufficientDelegation": "Phân bổ không đủ",
+    "status": "Trạng thái",
+    "selectValidator": "Chọn Người xác thực",
+    "activeOnly": "Chỉ hoạt động",
+    "switchValidator": "Chuyển đổi Người xác thực",
+    "finalityProviders": "Nhà cung cấp tính cuối cùng",
+    "unbond": "Hủy kết nối",
+    "transaction": "Giao dịch",
+    "stakeActiveTip": "cam kết đang hoạt động",
+    "unbondingRequestedTip": "Yêu cầu hủy kết nối",
+    "unbondingStartedTip": "Quá trình hủy kết nối của {time)} đã bắt đầu",
+    "unbondedTip": "cam kết đã được hủy kết nối",
+    "withdrawnTip": "cam kết đã được rút",
+    "pendingTip": "cam kết đang chờ {num} những xác nhận từ Bitcoin sẽ chỉ hiển thị từ thiết bị này",
+    "overStakingCapTip": "cam kết vượt quá giới hạn đặt cược",
+    "timelockExpiredTip": "Thời hạn của khóa đã hết hạn",
+    "unbondingRequestTip": "cam kết là đang yêu cầu hủy kết nối",
+    "withdrawalPendingTip": "Giao dịch rút tiền đang chờ xác nhận trên Bitcoin",
+    "unknown": "Không rõ",
+    "youWillStake": "Bạn sẽ đặt cược",
+    "toFinalityProvider": "Cho nhà cung cấp tính cuối cùng",
+    "term": "Thời hạn",
+    "stakingFee": "Phí đặt cược",
+    "confirmStaking": "Xác nhận cam kết",
+    "minMaxPeriod": "Thời hạn phải từ {min} đến {max}",
+    "stakingClosingTip": "Cửa sổ trang trị đang đóng lại. cam kết của bạn có thể <content>tràn</content>!",
+    "stakingFillingUpTip": "Giới hạn trang trị đang sắp được đạt. cam kết của bạn có thể <content>tràn</content>!",
+    "stakingNotStartedTip": "Việc trang trị chưa bắt đầu",
+    "stakingWillActiveTip": "Việc trang trị sẽ được kích hoạt sau khi chiều cao khối BTC vượt qua {activeHeight}. Chiều cao khối BTC hiện tại là {btcHeight}.",
+    "stakingParametersUpgrading": "Các thông số trang trị đang được nâng cấp",
+    "stakingUpgradeTip": "Các thông số trang trị đang được nâng cấp, trang trị sẽ được kích hoạt lại sớm.",
+    "stakingWindowClosed": "Cửa sổ trang trị đã đóng",
+    "stakingCapReached": "Giới hạn trang trị đã đạt được",
+    "stakingClosedTip": "Việc trang trị tạm thởi bị vô hiệu do cửa sổ trang trị đã đóng.",
+    "stakingOverflowTip": "Vui lòng kiểm tra lịch sử trang trị của bạn để xem liệu có bất kỳ khoản đặt cược nào của bạn bị gắn nhãn tràn hay không.",
+    "stakingUnbondedTip": "cam kết tràn nên được hủy kết nối và rút.",
+    "stakingCapReachedTip": "Việc trang trị tạm thởi bị vô hiệu do giới hạn trang trị đã đạt được.",
+    "period": "Thời hạn",
+    "blocks": "khối",
+    "disclaimer": "Tuyên bố từ chối",
+    "unbondAndWithdrawYourStakeTip": "Bạn có thể hủy kết nối và rút tiền cược của mình bất kỳ lúc nào với thởi gian hủy kết nối là {time}.",
+    "maximumStakingPeriodTip": "Cũng có một thời gian trang trị tối đa là {time)}.",
+    "automaticallyWithdrawableTip": "Nếu cược không được hủy kết nối trước khi kết thúc giai đoạn này, nó sẽ tự động trở thành có thể rút tiền bất kỳ lúc nào sau đó.",
+    "timesTip": "Các thời gian trên là xấp xỉ dựa trên thời gian khối BTC trung bình.",
+    "l2scanTerms": "L2Scan là đối tác của Babylon; ứng dụng đặt cược này được xây dựng bởi L2Scan, được hỗ trợ bởi Hệ thống chính thức của Babylon. Trước khi sử dụng dịch vụ của chúng tôi, vui lòng xem <terms>điều khoản sử dụng</terms>",
+    "selectFinalityProvider": "Chọn Nhà cung cấp tính cuối cùng",
+    "totalConfrimedStake": "Tổng đặt cược (Đã xác nhận)",
+    "stakers": "Người đặt cược",
+    "delegations": "Phân bổ",
+    "pendingStake": "Đang chờ đặt cược",
+    "FinalityProviders": "Nhà cung cấp tính cuối cùng",
+    "invalidAddressTypeTip": "Loại địa chỉ không hợp lệ. Vui lòng sử dụng Native SegWit hoặc Taproot",
+    "noBitcoinInscriptionsTip": "Vui lòng xác nhận rằng không có ghi danh Bitcoin trong ví của bạn. Nó sẽ sử dụng <content>Bitcoin thật trên mạng chính</content> để trang trị.",
+    "connectingTerm": "Bằng cách kết nối ví của bạn, bạn đồng ý với <terms>điều khoản sử dụng</terms>",
+    "totalValue": "Tổng giá trị",
+    "claim": "Yêu cầu",
+    "points": "Điểm"
+  },
+  "WalletPortfolio": {
+    "walletPortfolio": "Danh mục Ví",
+    "btcAddress": "Địa chỉ BTC",
+    "bbnAddress": "Địa chỉ BABY",
+    "totalValue": "Tổng giá trị",
+    "transactions": "Giao dịch",
+    "balances": "Số dư",
+    "claimableRewards": "Phần thưởng có thể yêu cầu",
+    "receivedRewards": "Phần thưởng đã nhận",
+    "assets": "Tài sản",
+    "fromProtocol": "Từ Giao thức",
+    "amount": "Số tiền",
+    "action": "Hành động",
+    "type": "Loại",
+    "price": "Giá cả",
+    "value": "Giá trị"
+  },
+  "ApiDoc": {
+    "cuPerCall": "{cuPerCall} Đơn vị tính / Cuộc gọi",
+    "request": "Yêu cầu",
+    "response": "Phản hồi",
+    "parameter": "Tham số",
+    "type": "Loại",
+    "description": "Mô tả",
+    "noParametersRequired": "Không cần tham số.",
+    "makeYourOwnAttempts": "Tự thực hiện các thử nghiệm của bạn",
+    "execute": "Thực thi",
+    "executeResponse": "Phản hồi thực thi",
+    "apiPlans": "gói API",
+    "ParamsDescription": {
+      "api": "Mã khóa API của bạn cho l2scan.",
+      "take": "Số lượng bản ghi hiển thị mỗi trang.",
+      "skip": "Số lượng bản ghi bị bỏ qua.",
+      "cursor": "Con trỏ phân trang.",
+      "address": "Băm địa chỉ.",
+      "height": "Chiều cao khối.",
+      "hash": "Băm giao dịch.",
+      "sort": "Sắp xếp theo thứ tự giảm dần."
+    },
+    "Account": {
+      "title": "Tài khoản",
+      "FetchAddressTransactions": {
+        "title": "Lấy danh sách giao dịch cho địa chỉ",
+        "subtitle": "Trả về danh sách các giao dịch trong một chuỗi khối."
+      },
+      "FetchAddressNativeBalance": {
+        "title": "Lấy số dư gốc cho địa chỉ",
+        "subtitle": "Trả về số dư gốc của một địa chỉ."
+      },
+      "FetchAddressTokensBalance": {
+        "title": "Lấy số dư mã thông báo cho địa chỉ",
+        "subtitle": "Trả về số dư mã thông báo của một địa chỉ."
+      },
+      "FetchAddressDetail": {
+        "title": "Lấy thông tin cơ bản của một tài khoản",
+        "subtitle": "Trả về thông tin tài khoản của một địa chỉ."
+      },
+      "FetchAddressStakingDelegations": {
+        "title": "Lấy phân bổ hiện tại của một tài khoản",
+        "subtitle": "Trả về danh sách phân bổ đặt cược BTC của một địa chỉ.",
+        "ParamsDescription": {
+          "stakingStatus": "Trạng thái đặt cược."
+        }
+      }
+    },
+    "Block": {
+      "title": "Khối",
+      "FetchBlockDetail": {
+        "title": "Lấy chi tiết khối",
+        "subtitle": "Trả về thông tin của một khối theo băm."
+      },
+      "FetchBlockTransactions": {
+        "title": "Lấy danh sách giao dịch khối",
+        "subtitle": "Trả về danh sách các giao dịch trong một khối."
+      }
+    },
+    "Contract": {
+      "VerifySourceCode": {
+        "title": "Xác minh mã nguồn",
+        "subtitle": "Trả về trạng thái thành công hoặc lỗi của yêu cầu xác minh mã.",
+        "ParamsDescription": {
+          "codeId": "ID mã.",
+          "projectType": "Loại trình tối ưu hóa. Sử dụng workspace cho workspace-optimizer, sử dụng contract cho rust-optimizer.",
+          "optimizerVersion": "Phiên bản trình tối ưu hóa.",
+          "git": "Liên kết Git của mã nguồn.",
+          "branch": "Nhánh GitHub hoặc thẻ của mã nguồn."
+        }
+      },
+      "CheckVerifyStatus": {
+        "title": "Kiểm tra trạng thái xác minh",
+        "subtitle": "Trả về trạng thái của yêu cầu xác minh mã.",
+        "ParamsDescription": {
+          "guid": "guid duy nhất nhận được từ yêu cầu xác minh."
+        }
+      }
+    },
+    "Stat": {
+      "title": "Thống kê",
+      "FetchBasicStats": {
+        "title": "Lấy thông tin và thống kê cơ bản của một chuỗi",
+        "subtitle": "Trả về các thống kê cơ bản của chuỗi."
+      },
+      "FetchStakingStats": {
+        "title": "Lấy thống kê của cam kết Bitcoin",
+        "subtitle": "Trả về thống kê đặt cược Bitcoin trên Babylon."
+      }
+    },
+    "Token": {
+      "title": "Mã thông báo",
+      "FetchTokens": {
+        "title": "Lấy danh sách mã thông báo",
+        "subtitle": "Trả về danh sách mã thông báo theo danh mục.",
+        "ParamsDescription": {
+          "type": "Danh mục mã thông báo."
+        }
+      }
+    },
+    "Transaction": {
+      "title": "Giao dịch",
+      "FetchTransactions": {
+        "title": "Lấy danh sách giao dịch",
+        "subtitle": "Trả về danh sách các giao dịch mới nhất."
+      },
+      "FetchTransactionDetail": {
+        "title": "Lấy chi tiết của một giao dịch",
+        "subtitle": "Trả về thông tin của một giao dịch theo mã giao dịch."
+      },
+      "FetchStakingTransactions": {
+        "title": "Lấy Giao dịch đặt cược Bitcoin",
+        "subtitle": "Trả về danh sách các giao dịch đặt cược Bitcoin thông qua giao thức Babylon."
+      }
+    },
+    "Validator": {
+      "title": "Người xác thực",
+      "FetchValidators": {
+        "title": "Lấy thông tin người xác thực",
+        "subtitle": "Trả về danh sách người xác thực.",
+        "ParamsDescription": {
+          "sort": "Sắp xếp theo hoa hồng hoặc thởi gian hoạt động 10K hoặc bao gồm thởi gian chấm công 50.",
+          "desc": "Sắp xếp theo thứ tự giảm dần."
+        }
+      }
+    },
+    "FinalityProvider": {
+      "title": "Nhà cung cấp tính cuối cùng",
+      "FetchFinalityProviders": {
+        "title": "Lấy Nhà cung cấp tính cuối cùng",
+        "subtitle": "Trả về danh sách các nhà cung cấp tính cuối cùng trên Babylon.",
+        "ParamsDescription": {
+          "sort": "Sắp xếp theo số lượng phân bổ hoặc số lượng người đặt cược."
+        }
+      },
+      "FetchFinalityProviderDetail": {
+        "title": "Lấy Chi tiết của Nhà cung cấp tính cuối cùng",
+        "subtitle": "Trả về thông tin của một nhà cung cấp tính cuối cùng trên Babylon.",
+        "ParamsDescription": {
+          "btcPk": "BTC PK của nhà cung cấp tính cuối cùng."
+        }
+      }
+    }
+  },
+  "PageMetadata": {
+    "ApiKey": {
+      "title": "Khóa API",
+      "description": "Một khóa API duy nhất cho tài khoản của bạn để truy cập các API đa chuỗi của chúng tôi"
+    },
+    "Billing": {
+      "title": "Thanh toán"
+    },
+    "PrivateNameTags": {
+      "title": "Thẻ tên riêng tư"
+    },
+    "WatchList": {
+      "title": "Danh sách theo dõi"
+    },
+    "Address": {
+      "title": "Địa chỉ {address}",
+      "description": "Trang Địa chỉ {address} cho phép người dùng xem giao dịch, số dư, giữ token (danh mục đầu tư)."
+    },
+    "BabylonL2scanApi": {
+      "title": "Tài liệu API L2scan"
+    },
+    "CosmosHubL2scanApi": {
+      "title": "Tài liệu API L2scan"
+    },
+    "Block": {
+      "title": "Khối #{height}"
+    },
+    "Blocks": {
+      "title": "Các khối"
+    },
+    "BtcFinalityProvider": {
+      "title": "Nhà cung cấp Tính cuối BTC (Mạng chính BTC) {address}"
+    },
+    "BtcFinalityProviders": {
+      "title": "Các nhà cung cấp Tính cuối BTC"
+    },
+    "ContractCode": {
+      "title": "Mã hợp đồng {codeId}",
+      "description": "Trang mã {codeId} cho phép người dùng xem chi tiết mã hợp đồng và các hợp đồng liên quan."
+    },
+    "VerifyContract": {
+      "title": "Xác minh hợp đồng"
+    },
+    "ConsumerChains": {
+      "title": "Chuỗi tiêu dùng"
+    },
+    "Contract": {
+      "title": "Hợp đồng {address}",
+      "description": "Trang hợp đồng {address} cho phép người dùng xem chi tiết hợp đồng, giao dịch, lịch sử thay đổi."
+    },
+    "Contracts": {
+      "title": "Các hợp đồng ({type})"
+    },
+    "Epochs": {
+      "title": "Các chu kỳ"
+    },
+    "BabylonFaucet": {
+      "title": "Faucet Babylon"
+    },
+    "FinalityProvider": {
+      "title": "Nhà cung cấp Tính cuối {address}"
+    },
+    "FinalityProviders": {
+      "title": "Các nhà cung cấp Tính cuối"
+    },
+    "Pricing": {
+      "title": "Giá gói API"
+    },
+    "Proposals": {
+      "title": "Đề xuất"
+    },
+    "StakingTransactions": {
+      "title": "Giao dịch Cược"
+    },
+    "Token": {
+      "title": "Mã thông báo {denom}",
+      "description": "Trang mã thông báo {denom} cho phép người dùng xem tổng cung tối đa, số lượng người nắm giữ, danh sách người nắm giữ hàng đầu, và số thập phân."
+    },
+    "Tokens": {
+      "title": "Trình theo dõi Mã thông báo ({type})"
+    },
+    "TopAccounts": {
+      "title": "Tài khoản hàng đầu"
+    },
+    "Transactions": {
+      "title": "Giao dịch"
+    },
+    "Transaction": {
+      "title": "Giao dịch {hash}",
+      "description": "Thông tin giao dịch chi tiết {chain} cho txhash ${params.hash}. Trạng thái giao dịch, xác nhận khối, phí giao dịch và tin nhắn sẽ được hiển thị."
+    },
+    "Validator": {
+      "title": "Người xác nhận {address}"
+    },
+    "Validators": {
+      "title": "Các người xác nhận"
+    },
+    "CreateProposal": {
+      "title": "Tạo Đề Xuất",
+      "description": "Tạo và gửi một đề xuất quản trị mới."
+    },
+    "Portfolio": {
+      "title": "Danh mục đầu tư"
+    },
+    "PortfolioWallet": {
+      "title": "Ví Danh mục đầu tư"
+    },
+    "Parameters": {
+      "title": "Tham số Mạng",
+      "subtitle": "Các tham số cấu hình hiện tại cho mạng thử nghiệm Babylon",
+      "all": "Tất cả Tham số",
+      "protocol": "Giao thức",
+      "finality": "Tính Cuối cùng",
+      "cosmos": "Cosmos SDK",
+      "other": "Khác",
+      "cards": {
+        "btcCheckpoint": {
+          "title": "Tham số Điểm Kiểm tra BTC",
+          "subtitle": "Các tham số liên quan đến hoạt động điểm kiểm tra Bitcoin",
+          "parameters": {
+            "confirmationDepth": "Độ sâu xác nhận BTC",
+            "finalizationTimeout": "Thời gian chờ hoàn tất điểm kiểm tra",
+            "checkpointTag": "Thẻ điểm kiểm tra"
+          }
+        },
+        "btcStaking": {
+          "title": "Tham số Staking BTC",
+          "subtitle": "Các tham số liên quan đến hoạt động staking Bitcoin",
+          "parameters": {
+            "minStakeAmount": "Số tiền stake tối thiểu",
+            "maxStakeAmount": "Số tiền stake tối đa",
+            "minStakingDuration": "Thời gian staking tối thiểu",
+            "maxStakingDuration": "Thời gian staking tối đa",
+            "minCommissionRate": "Tỷ lệ hoa hồng tối thiểu",
+            "unbondingDuration": "Thời gian unbonding",
+            "unbondingFee": "Phí unbonding"
+          }
+        },
+        "finality": {
+          "title": "Tham số Tính Cuối cùng",
+          "subtitle": "Các tham số liên quan đến hoạt động tính cuối cùng",
+          "parameters": {
+            "maxActiveProviders": "Số lượng nhà cung cấp tính cuối cùng tối đa",
+            "signedBlocksWindow": "Cửa sổ khối đã ký",
+            "signatureTimeout": "Thời gian chờ chữ ký",
+            "minSignatureRate": "Tỷ lệ chữ ký tối thiểu",
+            "jailDuration": "Thời gian giam giữ"
+          }
+        },
+        "nativeStaking": {
+          "title": "Tham số Staking Gốc",
+          "subtitle": "Các tham số liên quan đến staking token gốc",
+          "parameters": {
+            "unbondingTime": "Thời gian unbonding",
+            "maxValidators": "Số lượng validator tối đa",
+            "bondDenom": "Token bond",
+            "minCommissionRate": "Tỷ lệ hoa hồng tối thiểu"
+          }
+        },
+        "slashing": {
+          "title": "Tham số Slashing",
+          "subtitle": "Các tham số liên quan đến điều kiện slashing",
+          "parameters": {
+            "signedBlocksWindow": "Cửa sổ khối đã ký",
+            "minSignedPerWindow": "Tỷ lệ ký tối thiểu/cửa sổ",
+            "downtimeJailDuration": "Thời gian giam giữ downtime",
+            "doubleSignSlash": "Slash ký đôi",
+            "downtimeSlash": "Slash downtime"
+          }
+        },
+        "governance": {
+          "title": "Tham số Quản trị",
+          "subtitle": "Các tham số liên quan đến hoạt động quản trị",
+          "parameters": {
+            "votingPeriod": "Thời gian bỏ phiếu",
+            "minDeposit": "Số tiền đặt cọc tối thiểu",
+            "quorum": "Tỷ lệ tối thiểu",
+            "threshold": "Ngưỡng thông qua"
+          }
+        },
+        "distribution": {
+          "title": "Tham số Phân phối",
+          "subtitle": "Các tham số liên quan đến phân phối token",
+          "parameters": {
+            "communityTax": "Thuế cộng đồng",
+            "withdrawAddrEnabled": "Trạng thái kích hoạt địa chỉ rút tiền"
+          }
+        },
+        "incentive": {
+          "title": "Tham số Khuyến khích",
+          "subtitle": "Các tham số liên quan đến khuyến khích staking",
+          "parameters": {
+            "btcStakingShare": "Tỷ lệ staking BTC"
+          }
+        },
+        "mint": {
+          "title": "Tham số Đúc tiền",
+          "subtitle": "Các tham số liên quan đến đúc token",
+          "parameters": {
+            "annualProvisions": "Lượng cung cấp hàng năm"
+          }
+        }
+      }
+    },
+    "NetworkParameters": {
+      "title": "Tham số Mạng",
+      "subtitle": "Các tham số cấu hình hiện tại cho mạng thử nghiệm Babylon"
+    }
+  },
+  "NetworkParameters": {
+    "all": "Tất cả Tham số",
+    "protocol": "Giao thức",
+    "finality": "Tính Cuối cùng",
+    "cosmos": "Cosmos SDK",
+    "other": "Khác"
+  },
+  "CreateProposal": {
+    "createProposal": "Tạo Đề Xuất",
+    "proposalType": "Loại Đề Xuất",
+    "govVersion": "Phiên Bản Quản Trị",
+    "proposalTitle": "Tiêu Đề Đề Xuất",
+    "proposalSummary": "Tóm Tắt Đề Xuất",
+    "name": "Tên",
+    "height": "Chiều Cao",
+    "info": "Thông Tin",
+    "expedited": "Nhanh Chóng",
+    "recipient": "Người Nhận",
+    "amount": "Số Lượng",
+    "message": "Tin Nhắn",
+    "ipfs": "IPFS",
+    "forum": "Diễn Đàn",
+    "additionalLink": "Liên Kết Bổ Sung",
+    "additionalInfo": "Thông Tin Bổ Sung",
+    "governanceParameters": "Thông Số Quản Trị",
+    "minDeposit": "Đặt Cọc Tối Thiểu",
+    "minDepositExpedited": "Đặt Cọc Tối Thiểu (Nhanh)",
+    "maxDepositPeriod": "Thời Gian Đặt Cọc Tối Đa",
+    "votingPeriod": "Thời Gian Bỏ Phiếu",
+    "votingPeriodExpedited": "Thời Gian Bỏ Phiếu (Nhanh)",
+    "quorum": "Số Lượng Tối Thiểu",
+    "threshold": "Ngưỡng",
+    "thresholdExpedited": "Ngưỡng (Nhanh)",
+    "voteThreshold": "Ngưỡng Bỏ Phiếu",
+    "loadingParameters": "Đang tải thông số...",
+    "failedToLoadParameters": "Không thể tải thông số",
+    "preview": "Xem Trước",
+    "create": "Tạo",
+    "creating": "Đang tạo...",
+    "inputProposalText": "Nhập nội dung đề xuất",
+    "enterUrl": "Nhập URL",
+    "enterName": "Nhập tên",
+    "enterHeight": "Nhập chiều cao",
+    "enterInfo": "Nhập thông tin",
+    "enterRecipient": "Nhập người nhận",
+    "enterAmount": "Nhập số lượng",
+    "enterJsonMessage": "Nhập tin nhắn JSON",
+    "default": "Mặc Định",
+    "communityPoolSpend": "Chi Tiêu Quỹ Cộng Đồng",
+    "updateParams": "Cập Nhật Thông Số",
+    "softwareUpgrade": "Nâng Cấp Phần Mềm"
+  },
+  "Portfolio": {
+    "portfolio": "Danh mục đầu tư",
+    "notSignInTip": "Chưa đăng nhập",
+    "signInTip": "Vui lòng nhấn nút đăng nhập trước để xem dữ liệu liên quan.",
+    "signIn": "Đăng nhập",
+    "typeWallets": "Ví {type}",
+    "connectWallet": "Kết nối ví",
+    "disconnectWallet": "Ngắt kết nối ví",
+    "totalBalance": "Tổng số dư",
+    "stakeNow": "Đặt cược ngay",
+    "babylonPoints": "Điểm Babylon",
+    "assets": "tài sản",
+    "stakingRewards": "Phần thưởng đặt cược",
+    "restaking": "Restaking",
+    "transactionHistory": "Lịch sử giao dịch",
+    "portfolioWallet": "Ví danh mục đầu tư",
+    "totalWalletValue": "Tổng giá trị ví",
+    "btcWallet": "Ví BTC",
+    "evmWallet": "Ví EVM",
+    "bbnWallet": "Ví BBN",
+    "deposit": "Gửi tiền",
+    "token": "Mã thông báo",
+    "price": "Giá",
+    "available": "Có sẵn",
+    "walletBalance": "Số dư ví",
+    "stakedBalance": "Số dư đã stake",
+    "supportedProtocol": "Giao thức được hỗ trợ",
+    "total": "Tổng cộng",
+    "yourPosition": "Vị trí của bạn",
+    "reward": "Phần thưởng",
+    "points": "Điểm",
+    "action": "Hành động",
+    "status": "Trạng thái",
+    "txnHash": "Mã giao dịch",
+    "type": "Loại",
+    "block": "Khối",
+    "age": "Tuổi",
+    "from": "Từ",
+    "to": "Đến",
+    "value": "Giá trị",
+    "name": "Tên"
+  },
+  "Charts": {
+    "title": "Biểu đồ",
+    "overview": "Tổng quan",
+    "description": "Trực quan hóa dữ liệu và xu hướng mạng",
+    "tps": "TPS",
+    "tpsLabel": "Giao dịch mỗi giây",
+    "btcDistribution": "Phân phối BTC",
+    "totalStakedBTC": "Tổng BTC đã stake",
+    "btcStakingHistory": "Lịch sử Staking BTC",
+    "stakedBTC": "BTC đã stake",
+    "stakedBTCLabel": "BTC đã stake",
+    "unstakedBTC": "BTC chưa stake",
+    "total": "Tổng cộng",
+    "percentage": "Phần trăm",
+    "stakingTrend": "Xu hướng staking",
+    "validatorPerformance": "Hiệu suất Validator",
+    "rewardsDistribution": "Phân phối phần thưởng",
+    "networkHealth": "Sức khỏe mạng lưới",
+    "topValidatorsByRewards": "Validators hàng đầu theo phần thưởng",
+    "babyRewards": "Phần thưởng BABY",
+    "validator": "Validator",
+    "reward": "Phần thưởng",
+    "commission": "Hoa hồng",
+    "votingPower": "Quyền bỏ phiếu",
+    "gasFeeTrends": "Xu hướng phí Gas",
+    "gasFee": "Phí Gas",
+    "avgGasFee": "Phí giao dịch trung bình",
+    "minGasFee": "Phí Gas tối thiểu",
+    "maxGasFee": "Phí Gas tối đa",
+    "babyUnit": "BABY",
+    "walletGrowth": "Tăng trưởng ví",
+    "wallets": "Ví",
+    "walletsCount": "Số lượng ví",
+    "totalWallets": "Tổng số ví",
+    "activeAddresses": "Địa chỉ hoạt động",
+    "activeAddressesLabel": "Địa chỉ hoạt động hàng ngày",
+    "dailyActiveAddresses": "Địa chỉ hoạt động hàng ngày",
+    "7d": "7 ngày"
+  }
+}

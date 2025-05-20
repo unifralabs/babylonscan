@@ -1,0 +1,29 @@
+{
+  "name": "@cosmoscan/core-db",
+  "version": "0.1.0",
+  "license": "ISC",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "db:studio": "prisma studio --port 5555 --browser none",
+    "db:generate": "prisma generate",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:pull": "prisma db pull",
+    "db:push": "prisma db push",
+    "db:seed": "prisma db seed",
+    "db:reset": "prisma migrate reset --skip-generate",
+    "format": "prisma format",
+    "clean": "rm -rf .turbo output zod node_modules src/generated",
+    "prebuild": "npm run db:generate",
+    "predb:studio": "npm run db:generate"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "devDependencies": {
+    "@cosmoscan/config-ts": "workspace:*",
+    "@cosmoscan/shared": "workspace:*"
+  }
+}

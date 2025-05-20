@@ -1,0 +1,4 @@
+{
+  "extends": "@cosmoscan/config-ts/nextjs.json",
+  "include": ["index.d.ts", "**/*.ts", "**/*.tsx"]
+}

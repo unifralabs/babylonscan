@@ -1,0 +1,58 @@
+{
+  "name": "@cosmoscan/shared",
+  "version": "0.1.0",
+  "license": "ISC",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./constants/*": [
+      "./src/constants/*.ts"
+    ],
+    "./constants/chain": [
+      "./src/constants/chains/index.ts"
+    ],
+    "./fonts/*": [
+      "./src/fonts/*.ts"
+    ],
+    "./providers/*": [
+      "./src/providers/*.ts",
+      "./src/providers/*.tsx"
+    ],
+    "./stores/*": [
+      "./src/contexts/*.ts"
+    ],
+    "./types": [
+      "./src/types/index.ts"
+    ],
+    "./utils": [
+      "./src/utils/index.ts"
+    ],
+    "./utils/chain": [
+      "./src/utils/chain.ts"
+    ],
+    "./utils/btc": [
+      "./src/utils/btc.ts"
+    ],
+    "./hooks/*": [
+      "./src/hooks/*.ts"
+    ]
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules"
+  },
+  "dependencies": {
+    "bech32": "^2.0.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^3.6.0",
+    "dayjs": "^1.11.11",
+    "numeral": "^2.0.6",
+    "query-string": "^9.0.0",
+    "tailwind-merge": "^2.3.0",
+    "timeago.js": "^4.0.2"
+  },
+  "devDependencies": {
+    "@cosmoscan/config-nextjs": "workspace:*",
+    "@cosmoscan/config-ts": "workspace:*",
+    "@types/numeral": "^2.0.5"
+  }
+}

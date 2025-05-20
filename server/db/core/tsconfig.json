@@ -1,0 +1,4 @@
+{
+  "extends": "@cosmoscan/config-ts/base.json",
+  "include": ["**/*.ts"]
+}

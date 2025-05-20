@@ -1,0 +1,17 @@
+{
+  "name": "@cosmoscan/config-tailwindcss",
+  "version": "0.1.0",
+  "license": "ISC",
+  "type": "module",
+  "private": true,
+  "main": "./index.ts",
+  "files": [
+    "*.css"
+  ],
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules"
+  },
+  "devDependencies": {
+    "@cosmoscan/config-ts": "workspace:*"
+  }
+}

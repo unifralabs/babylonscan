@@ -1,0 +1,7 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+  - 'configs/*'
+  - 'server/api/*'
+  - 'server/db/*'
+  - '!**/test/**'

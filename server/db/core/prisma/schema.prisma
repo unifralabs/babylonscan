@@ -1,0 +1,707 @@
+generator kysely {
+  provider = "prisma-kysely"
+  fileName = "schema.d.ts"
+}
+
+generator zod {
+  provider = "zod-prisma"
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "nativeDistinct", "relationJoins", "omitApi"]
+  // binaryTargets   = ["native", "darwin-arm64"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("COSMOSCAN_DATABASE_URL")
+}
+
+model finality_providers {
+  id                     Int      @id @default(autoincrement())
+  btc_pk                 String   @unique(map: "finality_providers_pk_index")
+  btc_address            String?
+  babylon_pk             String
+  babylon_address        String?
+  master_pub_rand        String
+  name                   String
+  description            Json?
+  supported_chains       String[]
+  commission             Decimal? @default(0) @db.Decimal
+  registered_epoch       BigInt?  @default(0)
+  slashed_babylon_height BigInt?  @default(0)
+  slashed_btc_height     BigInt?  @default(0)
+  voting_power           Decimal? @default(0) @db.Decimal
+  self_bonded            Decimal? @default(0) @db.Decimal
+  uptime                 Decimal? @default(0) @db.Decimal
+  status                 String?  @default("CREATED")
+  delegations            BigInt?  @default(0)
+  total_sat              Decimal? @default(0) @db.Decimal
+  stakers                BigInt?  @default(0)
+  inserted_at            DateTime @default(now())
+  updated_at             DateTime @default(now())
+}
+
+model finality_providers_delegations {
+  id                               Int      @id @default(autoincrement())
+  babylon_pk                       String?
+  babylon_address                  String?
+  btc_pk                           String
+  btc_address                      String?
+  fp_btc_pk_list                   String[]
+  start_height                     BigInt?
+  end_height                       BigInt?
+  total_sat                        Decimal  @db.Decimal
+  active                           Boolean? @default(false)
+  status_desc                      String?
+  staking_tx_hash                  String   @unique(map: "finality_providers_delegations_staking_tx_index")
+  staking_tx_hex                   String?
+  staking_output_idx               BigInt   @default(0)
+  staking_timestamp                BigInt   @default(0)
+  staking_block_height             BigInt   @default(0)
+  staking_peroid                   BigInt?  @default(0)
+  unbonding_tx_hex                 String?
+  unbonding_tx_hash                String?
+  unboding_time                    BigInt?  @default(0)
+  unbonding_sat                    Decimal  @db.Decimal
+  unbonding_delegator_sig          String?
+  unbonding_covenant_sig           String?
+  unbonding_timestamp              BigInt?  @default(0)
+  unboding_slashing_tx_hex         String?
+  unbonding_slashing_tx_hash       String?
+  unbonding_slashing_delegator_sig String?
+  unbonding_slashing_covenant_sig  String?
+  slashing_tx_hex                  String?
+  slashing_tx_hash                 String?
+  slashing_delegator_sig           String?
+  slashing_covenant_sig            String?
+  slashing_timestamp               BigInt?  @default(0)
+  withdrawal_tx_hex                String?
+  withdrawal_tx_hash               String?
+  withdrawal_timestamp             BigInt?  @default(0)
+  inserted_at                      DateTime @default(now())
+  updated_at                       DateTime @default(now())
+
+  @@index([fp_btc_pk_list], type: Gin)
+  @@index([btc_pk], map: "finality_providers_delegations_staker_index")
+}
+
+model staking_transactions {
+  id                 Int      @id @default(autoincrement())
+  hash               String   @unique(map: "staking_transaction_hash_index")
+  staking_hash       String?
+  height             BigInt
+  staker             String?
+  amount             Decimal? @default(0) @db.Decimal
+  period             BigInt?  @default(0)
+  finality_providers String?
+  timestamp          BigInt
+  is_overflow        Boolean? @default(false)
+  staking_output_idx BigInt?  @default(0)
+  tx_status          String?  @default("SUCCESS")
+  tx_type            String?  @default("STAKING")
+  staking_status     String?  @default("PENDING")
+  inputs             Json?
+  outputs            Json?
+  inserted_at        DateTime @default(now())
+  updated_at         DateTime @default(now())
+
+  @@index([height], map: "staking_transaction_height_index")
+}
+
+model blocks {
+  height                  BigInt   @id
+  hash                    String   @unique
+  num_txs                 Int?     @default(0)
+  size                    Int?     @default(0)
+  gas_used                BigInt?  @default(0)
+  gas_wanted              BigInt?  @default(0)
+  round                   Int?     @default(0)
+  status                  Int?     @default(0)
+  fp_reward               Decimal? @default(0) @db.Decimal
+  validator_reward        Decimal? @default(0) @db.Decimal
+  staker_reward           Decimal? @default(0) @db.Decimal
+  proposer_address        String?
+  timestamp               BigInt
+  block_events            Json?
+  raw_json                Json?
+  total_validators        Int?
+  signed_validators       Int?
+  validator_set           String?
+  inserted_at             DateTime @default(now())
+  updated_at              DateTime @default(now())
+  btc_staking_reward      Json?
+  btc_timestamping_reward Json?
+  total_voting_power      Decimal? @db.Decimal
+}
+
+model block_signatures {
+  id                Int    @id @default(autoincrement())
+  index             Int
+  validator_address String
+  signed            Int
+  timestamp         BigInt
+  block_height      BigInt
+  block_id_flag     Int
+
+  @@unique([block_height, validator_address])
+  @@index([block_height])
+  @@index([validator_address])
+}
+
+model transactions {
+  id            Int      @id @default(autoincrement())
+  hash          String   @unique
+  height        BigInt
+  tx_index      Int
+  status        Int?     @default(0)
+  type          String?
+  message_types String[]
+  from_address  String?
+  to_address    String?
+  amount        Decimal? @db.Decimal
+  total_amount  Json?
+  amount_type   String?
+  tx_fee        Json?
+  messages      Json?
+  memo          String?
+  signatures    String[]
+  gas_wanted    Decimal? @default(0) @db.Decimal
+  gas_used      Decimal? @default(0) @db.Decimal
+  error_message String?
+  timestamp     BigInt
+  event_logs    Json?
+  raw_json      Json?
+  inserted_at   DateTime @default(now())
+  updated_at    DateTime @default(now())
+
+  @@unique([height, tx_index])
+  @@index([height, tx_index])
+  @@index([message_types], type: Gin)
+}
+
+model validators {
+  id                    Int      @id @default(autoincrement())
+  operator_address      String   @unique
+  owner_address         String   @unique
+  consensus_pubkey_type String
+  consensus_pubkey      String   @unique
+  hex_address           String   @unique
+  signer_address        String   @unique
+  name                  String?
+  website               String?
+  memo                  String?
+  commission            Decimal? @default(0) @db.Decimal
+  max_rate              Decimal? @default(0) @db.Decimal
+  max_change_rate       Decimal? @default(0) @db.Decimal
+  voting_power          Decimal? @default(0) @db.Decimal
+  self_bonded           Decimal? @default(0) @db.Decimal
+  status                String?  @default("BOND_STATUS_BONDED")
+  jailed                Boolean?
+  raw_json              Json?
+  inserted_at           DateTime @default(now())
+  updated_at            DateTime @default(now())
+
+  @@index([operator_address])
+  @@index([owner_address])
+  @@index([hex_address])
+  @@index([signer_address])
+  @@index([status, jailed])
+  @@index([voting_power(sort: Desc)])
+  @@index([commission(sort: Asc)])
+  @@index([name])
+}
+
+model validators_delegations {
+  id          BigInt   @id @default(autoincrement())
+  delegator   String
+  validator   String
+  denom       String
+  amount      Decimal  @db.Decimal(80, 0)
+  shares      Decimal? @db.Decimal(80, 18)
+  inserted_at DateTime @default(now())
+  updated_at  DateTime @default(now())
+
+  @@unique([delegator, validator])
+  @@index([delegator])
+  @@index([validator])
+}
+
+model validator_power_events {
+  id           Int      @id @default(autoincrement())
+  validator    String
+  tx_hash      String
+  height       BigInt
+  tx_index     Int
+  block_hash   String
+  event_type   String
+  amount       Decimal? @db.Decimal
+  amount_type  String?
+  total_amount Json?
+  timestamp    BigInt
+  inserted_at  DateTime @default(now())
+  updated_at   DateTime @default(now())
+
+  @@unique([validator, tx_hash])
+  @@index([validator, height, tx_index])
+}
+
+model transaction_messages {
+  id                Int      @id @default(autoincrement())
+  tx_hash           String
+  message_index     Int
+  height            BigInt
+  transaction_index Int
+  block_hash        String
+  message_type      String
+  topic0            String?
+  topic1            String?
+  topic2            String?
+  topic3            String?
+  timestamp         BigInt
+  raw_json          Json?
+  inserted_at       DateTime @default(now())
+  updated_at        DateTime @default(now())
+
+  @@unique([tx_hash, message_index])
+  @@index([height])
+  @@index([message_type])
+  @@index([topic0])
+  @@index([topic1])
+  @@index([topic2])
+  @@index([topic3])
+}
+
+model transaction_addresses {
+  id            Int      @id @default(autoincrement())
+  address       String
+  tx_hash       String
+  height        BigInt
+  tx_index      Int
+  block_hash    String
+  participants  String[]
+  message_types String[]
+  timestamp     BigInt
+  inserted_at   DateTime @default(now())
+  updated_at    DateTime @default(now())
+
+  @@unique([address, tx_hash])
+  @@index([address, height, tx_index])
+  @@index([message_types], type: Gin)
+}
+
+model proposals {
+  id                 Int      @id @default(autoincrement())
+  proposal_id        BigInt   @unique
+  submit_tx_hash     String?
+  submit_height      BigInt?
+  message_types      String[]
+  messages           Json?    @default("[]") @db.Json
+  status             String?
+  final_tally_result Json?    @db.Json
+  tally_result       Json?    @db.Json
+  submit_time        BigInt?
+  deposite_end_time  BigInt?
+  total_deposit      Json?    @default("[]") @db.Json
+  voting_start_time  BigInt?
+  voting_end_time    BigInt?
+  metadata           String?
+  title              String?
+  summary            String?
+  proposer           String?
+  expedited          Boolean?
+  failed_reason      String?
+  inserted_at        DateTime @default(now())
+  updated_at         DateTime @default(now())
+}
+
+model proposal_deposits {
+  id           Int      @id @default(autoincrement())
+  proposal_id  BigInt
+  depositor    String
+  inserted_at  DateTime @default(now())
+  updated_at   DateTime @default(now())
+  total_amount Json?
+  amount       Decimal? @db.Decimal
+
+  @@unique([proposal_id, depositor])
+}
+
+model proposal_votes {
+  id          Int      @id @default(autoincrement())
+  height      BigInt?
+  tx_index    Int?
+  block_hash  String?
+  tx_hash     String?
+  proposal_id BigInt
+  voter       String
+  options     Json?    @default("[]") @db.Json
+  metadata    String?
+  timestamp   BigInt?
+  inserted_at DateTime @default(now())
+  updated_at  DateTime @default(now())
+  vote_option Int?
+  vote_weight Decimal? @db.Decimal
+
+  @@unique([proposal_id, voter])
+  @@index([proposal_id, height, tx_index])
+}
+
+model coin_meta {
+  id               BigInt   @id @default(autoincrement())
+  chain_name       String
+  coin_name        String   @unique
+  coin_symbol      String   @unique
+  description      String?
+  denom_units      Json?
+  base_denom       String?
+  display_denom    String?
+  uri              String?
+  uri_hash         String?
+  coingecko_id     String?  @unique @db.VarChar(512)
+  coinmarketcap_id BigInt?  @unique
+  categories       Json?
+  links            Json?
+  image            Json?
+  inserted_at      DateTime @default(now())
+  updated_at       DateTime @default(now())
+  type             String?
+
+  @@unique([coin_name, coingecko_id, coinmarketcap_id])
+}
+
+model address_meta {
+  id          BigInt   @id @default(autoincrement())
+  bbn_pk      String   @unique
+  bbn_address String   @unique
+  btc_pk      String?
+  btc_address String?
+  inserted_at DateTime @default(now())
+  updated_at  DateTime @default(now())
+}
+
+model coin_denoms {
+  id           BigInt   @id @default(autoincrement())
+  denom        String   @unique
+  exponent     Int?
+  decimals     Int?
+  coin_name    String?
+  coin_symbol  String?
+  type         String
+  chain_name   String
+  denom_trace  Json?
+  total_supply Decimal?
+  inserted_at  DateTime @default(now())
+  updated_at   DateTime @default(now())
+}
+
+model coin_market_data {
+  id                          BigInt   @id @default(autoincrement())
+  coin_name                   String   @unique
+  coingecko_id                String?  @unique @db.VarChar(512)
+  coinmarketcap_id            BigInt?  @unique
+  price                       Decimal?
+  price_change_percentage_24h Decimal?
+  circulating_market_cap      Decimal?
+  volume_24h                  Decimal?
+  total_supply                Decimal?
+  circulating_supply          Decimal?
+  inserted_at                 DateTime @default(now())
+  updated_at                  DateTime @default(now())
+  coin_symbol                 String?  @unique
+
+  @@unique([coin_name, coingecko_id, coinmarketcap_id])
+}
+
+model coin_balance {
+  id          BigInt   @id @default(autoincrement())
+  address     String
+  denom       String
+  balance     Decimal? @db.Decimal(80, 0)
+  inserted_at DateTime @default(now())
+  updated_at  DateTime @default(now())
+
+  @@unique([address, denom])
+}
+
+model btc_staking_rewards {
+  id               BigInt   @id @default(autoincrement())
+  address          String
+  stakeholder_type String
+  coins            Json?
+  withdrawn_coins  Json?
+  inserted_at      DateTime @default(now())
+  updated_at       DateTime @default(now())
+
+  @@unique([address, stakeholder_type])
+}
+
+model babylon_epochs {
+  id                                     BigInt   @id @default(autoincrement())
+  epoch                                  BigInt   @unique
+  current_epoch_interval                 BigInt
+  first_block_height                     BigInt
+  last_block_time                        BigInt?
+  app_hash_root                          String
+  sealer_app_hash                        String
+  sealer_block_hash                      String
+  total_voting_power                     BigInt?
+  validators                             Json?
+  best_submission_btc_block_height       BigInt?
+  best_submission_btc_block_hash         String?
+  best_submission_transactions           Json?
+  best_submission_vigilante_address_list Json?
+  status                                 Int?
+  status_desc                            String?
+  bitmap                                 String?
+  bls_multi_sig                          String?
+  bls_aggr_pk                            String?
+  checkpoint_power_sum                   BigInt?
+  checkpoint_lift_cycle                  Json?
+  inserted_at                            DateTime @default(now())
+  updated_at                             DateTime @default(now())
+}
+
+model babylon_epoch_validators {
+  id           BigInt   @id @default(autoincrement())
+  epoch        BigInt
+  validator    String
+  voting_power BigInt
+  inserted_at  DateTime @default(now())
+  updated_at   DateTime @default(now())
+
+  @@unique([epoch, validator])
+}
+
+model finality_votes {
+  id          Int      @id @default(autoincrement())
+  height      BigInt
+  index       Int
+  btc_pk      String
+  inserted_at DateTime @default(now())
+  updated_at  DateTime @default(now())
+
+  @@unique([height, btc_pk])
+}
+
+model btc_delegation_state_updates {
+  id          Int      @id @default(autoincrement())
+  delegator   String
+  state       String
+  validator   String
+  amount      Json?
+  height      BigInt
+  timestamp   BigInt
+  inserted_at DateTime @default(now())
+  updated_at  DateTime @default(now())
+
+  @@unique([delegator, height])
+}
+
+model contracts {
+  id                 BigInt   @id @default(autoincrement())
+  address            String   @unique
+  code_id            BigInt
+  creator            String?
+  admin              String?
+  label              String?
+  creation_height    BigInt?
+  creation_tx_index  Int?
+  creation_tx_hash   String?
+  creation_timestamp BigInt?
+  ibc_port_id        String?
+  extension          Json?
+  inserted_at        DateTime @default(now())
+  updated_at         DateTime @default(now())
+
+  @@index([creator])
+  @@index([creation_timestamp])
+}
+
+model contract_codes {
+  id                 BigInt   @id @default(autoincrement())
+  code_id            BigInt   @unique
+  creator            String?
+  data_hash          String?
+  data               String?
+  permission         Int?
+  permission_address String[]
+  creation_height    BigInt?
+  creation_tx_index  Int?
+  creation_tx_hash   String?
+  creation_timestamp BigInt?
+  is_verified        Boolean?
+  optimizer_type     String?
+  optimizer_version  String?
+  repository_url     String?
+  branch_name        String?
+  source_code        String?
+  inserted_at        DateTime @default(now())
+  updated_at         DateTime @default(now())
+
+  @@index([creator])
+}
+
+model contract_code_verify_job {
+  uid                   String  @id @db.VarChar(64)
+  code_id               BigInt
+  verification_settings Json?
+  status                Int?    @db.SmallInt
+  failed_reason         String?
+
+  @@index([status])
+}
+
+model contract_code_history {
+  id          BigInt   @id @default(autoincrement())
+  address     String
+  operation   BigInt
+  code_id     BigInt
+  height      BigInt?
+  tx_index    Int?
+  tx_hash     String?
+  timestamp   BigInt?
+  msg         Json?
+  raw_msg     String?
+  inserted_at DateTime @default(now())
+  updated_at  DateTime @default(now())
+
+  @@unique([address, height, tx_index])
+  @@index([address, height, tx_index])
+}
+
+model contract_execute_history {
+  id          BigInt   @id @default(autoincrement())
+  address     String
+  sender      String
+  height      BigInt?
+  tx_index    Int?
+  tx_hash     String?
+  msg_index   Int?
+  timestamp   BigInt?
+  funds       Json?
+  msg         Json?
+  raw_msg     String?
+  inserted_at DateTime @default(now())
+  updated_at  DateTime @default(now())
+
+  @@unique([height, tx_index, msg_index])
+  @@index([address, height, tx_index])
+}
+
+model withdraw_history {
+  id              BigInt   @id @default(autoincrement())
+  validator       String
+  delegator       String?
+  height          BigInt?
+  tx_index        Int?
+  tx_hash         String?
+  msg_index       Int?
+  timestamp       BigInt?
+  amount          Decimal? @db.Decimal
+  total_amount    Json?
+  withdrawal_type String?
+  inserted_at     DateTime @default(now())
+  updated_at      DateTime @default(now())
+
+  @@unique([height, tx_index, msg_index])
+  @@index([delegator, height, tx_index, msg_index])
+  @@index([validator, height, tx_index, msg_index])
+}
+
+model zc_chains {
+  id                Int      @id @default(autoincrement())
+  chain_id          String   @unique
+  inserted_at       DateTime @default(now())
+  updated_at        DateTime @default(now())
+  chain_description String?
+  chain_name        String?
+}
+
+model btc_staking_infos {
+  id                 Int      @id @default(autoincrement())
+  staking_tx_hex     String   @unique
+  staking_term       Int
+  amount             Float
+  period             Int
+  fp_btc_pk          String
+  address            String
+  public_key_nocoord String
+  fee_rate           Float
+  handling_fee       Float
+  memo               String?
+  inserted_at        DateTime @default(now())
+  updated_at         DateTime @default(now())
+  tp_ref             String?
+  transaction_type   String?
+}
+
+model account_watch_list {
+  id                  Int      @id @default(autoincrement())
+  user_id             String
+  address             String
+  email               String?
+  description         String?
+  notification_method String
+  inserted_at         DateTime @default(now())
+  updated_at          DateTime @default(now())
+
+  @@unique([user_id, address])
+  @@index([user_id])
+  @@index([address])
+}
+
+model module_params {
+  id          Int      @id @default(autoincrement())
+  module_name String   @unique
+  params      Json?
+  inserted_at DateTime @default(now())
+  updated_at  DateTime @default(now())
+}
+
+model fp_meta {
+  btc_pk           String   @id
+  name             String
+  moniker          String?
+  identity         String?
+  website          String?
+  security_contact String?
+  details          String?
+  commission       Decimal? @db.Decimal(5, 4)
+  status           String?
+  delegations      Int?
+  total_sat        BigInt?
+}
+
+model babylon_checkpoint_lifecycle {
+  id           BigInt   @id @default(autoincrement())
+  epoch        BigInt
+  status       Int
+  status_desc  String?
+  block_height BigInt?
+  block_time   BigInt?
+  inserted_at  DateTime @default(now())
+  updated_at   DateTime @default(now())
+
+  @@unique([epoch, status])
+}
+
+model sync_progress {
+  id    Int     @id @default(autoincrement())
+  key   String? @unique
+  value BigInt?
+}
+
+model covenant_members {
+  id          String   @id
+  name        String
+  description String?
+  website     String?
+  logo        String?
+  pks         String[]
+  inserted_at DateTime @default(now())
+  updated_at  DateTime @default(now())
+
+  @@index([pks], type: Gin)
+}

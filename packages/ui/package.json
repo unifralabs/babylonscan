@@ -1,0 +1,105 @@
+{
+  "name": "@cosmoscan/ui",
+  "version": "0.1.0",
+  "license": "ISC",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": [
+      "./src/common/*.ts",
+      "./src/common/*.tsx"
+    ],
+    "./sonner": "./src/common/sonner.tsx",
+    "./layouts": [
+      "./src/layouts/index.ts"
+    ],
+    "./pages/home": [
+      "./src/pages/home/index.tsx"
+    ],
+    "./components/*": [
+      "./src/components/*.ts",
+      "./src/components/*.tsx"
+    ],
+    "./icons/*": [
+      "./src/icons/*.tsx"
+    ],
+    "./icons/chain": [
+      "./src/icons/chains/index.ts"
+    ],
+    "./icons/menu": [
+      "./src/icons/menu/index.ts"
+    ],
+    "./icons/social": [
+      "./src/icons/socials/index.ts"
+    ],
+    "./icons/statistical": [
+      "./src/icons/statistical/index.ts"
+    ],
+    "./icons/wallets": [
+      "./src/icons/wallets/index.ts"
+    ],
+    "./icons/token": [
+      "./src/icons/token/index.ts"
+    ]
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "diff": "pnpm dlx shadcn-ui diff"
+  },
+  "dependencies": {
+    "@codemirror/lang-json": "^6.0.1",
+    "@codemirror/lang-rust": "^6.0.1",
+    "@download/blockies": "^1.0.3",
+    "@hookform/resolvers": "^3.6.0",
+    "@radix-ui/react-accordion": "^1.2.0",
+    "@radix-ui/react-alert-dialog": "^1.1.1",
+    "@radix-ui/react-aspect-ratio": "^1.1.0",
+    "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-checkbox": "^1.1.0",
+    "@radix-ui/react-collapsible": "^1.1.0",
+    "@radix-ui/react-context-menu": "^2.2.1",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-dropdown-menu": "^2.1.1",
+    "@radix-ui/react-hover-card": "^1.1.1",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-menubar": "^1.1.1",
+    "@radix-ui/react-navigation-menu": "^1.2.0",
+    "@radix-ui/react-popover": "^1.1.1",
+    "@radix-ui/react-progress": "^1.1.0",
+    "@radix-ui/react-radio-group": "^1.2.0",
+    "@radix-ui/react-scroll-area": "^1.1.0",
+    "@radix-ui/react-select": "^2.1.1",
+    "@radix-ui/react-separator": "^1.1.0",
+    "@radix-ui/react-slider": "^1.2.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.1",
+    "@radix-ui/react-toggle": "^1.1.0",
+    "@radix-ui/react-toggle-group": "^1.1.0",
+    "@radix-ui/react-tooltip": "^1.1.1",
+    "@uiw/react-codemirror": "^4.23.2",
+    "class-variance-authority": "^0.7.0",
+    "cmdk": "^1.0.0",
+    "embla-carousel-react": "^8.1.5",
+    "input-otp": "^1.2.4",
+    "next-themes": "^0.3.0",
+    "react-day-picker": "^8.10.1",
+    "react-hook-form": "^7.52.0",
+    "react-json-view": "^1.21.3",
+    "react-markdown": "^9.0.1",
+    "react-resizable-panels": "^2.0.19",
+    "rehype-external-links": "^3.0.0",
+    "rehype-highlight": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "sonner": "^1.5.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^0.9.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@cosmoscan/config-tailwindcss": "workspace:*",
+    "@cosmoscan/config-ts": "workspace:*",
+    "@cosmoscan/shared": "workspace:*"
+  }
+}

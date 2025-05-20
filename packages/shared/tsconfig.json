@@ -1,0 +1,4 @@
+{
+  "extends": "@cosmoscan/config-ts/react.json",
+  "include": ["index.d.ts", "**/*.ts", "**/*.tsx"]
+}
